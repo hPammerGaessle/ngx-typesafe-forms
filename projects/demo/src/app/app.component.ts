@@ -41,15 +41,15 @@ export class AppComponent implements OnInit {
     const optionalPropControl1: FormControl<string | undefined> = this.formGroup.controls.optionalProp;
     const optionalPropControl2: FormControl<string | undefined> = this.formGroup.getFormControl('optionalProp');
 
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     optionalPropControl1
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     optionalPropControl2
 
     if (this.formGroup.contains('optionalProp')) {
       const optionalPropControl3: AbstractControl<string | undefined> = this.formGroup.controls.optionalProp;
 
-      // tslint:disable-next-line
+      // eslint-disable-next-line
       optionalPropControl3
     }
   }

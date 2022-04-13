@@ -22,21 +22,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-typesafe-forms/tsconfig.lib.json",
-              "projects/ngx-typesafe-forms/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-typesafe-forms/**/*.ts",
+              "projects/ngx-typesafe-forms/**/*.html"
             ]
-          }
-        },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": {
-            "coverage": true
           }
         }
       }
@@ -124,13 +115,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/demo/tsconfig.app.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/demo/**/*.ts",
+              "projects/demo/**/*.html"
             ]
           }
         }
@@ -139,6 +128,7 @@
   },
   "defaultProject": "ngx-typesafe-forms",
   "cli": {
-    "analytics": "5afa0aea-5310-4c03-abca-efef53ff8d99"
+    "analytics": "5afa0aea-5310-4c03-abca-efef53ff8d99",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
